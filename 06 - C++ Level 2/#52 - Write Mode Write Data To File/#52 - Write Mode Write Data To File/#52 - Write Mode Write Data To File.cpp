@@ -1,0 +1,24 @@
+#include <iostream>
+#include <fstream> // „‰÷Ì› ÂÌ «·„ﬂ »…
+using namespace std;
+
+int main() {
+    fstream MyFile;
+
+    // › Õ «·„·› ›Ì Ê÷⁄ «·ﬂ «»… (”Ì „ ≈‰‘«ƒÂ ≈–« ·„ Ìﬂ‰ „ÊÃÊœ«)
+    MyFile.open("MyFile.txt", ios::out); // Write Mode »Ê÷⁄ «·ﬂ «»… ﬂ· „«  › Õ «·„·› »Ì„”Õ Ì·Ì ﬂ«‰ „ﬂ Ê» ﬁ»· »«·„·› 
+                                                      // Ê»Ì”Ã· Ì·Ì »œﬂ  ”Ã·Ê
+
+    if (MyFile.is_open()) {
+        MyFile << "Hi, this is the first line\n";
+        MyFile << "Hi, this is the second line\n";
+        MyFile << "Hi, this is the third line\n";
+
+        MyFile.close(); // ÂÌ ÷—Ê—Ì…
+    }
+    // ÿ—Ìﬁ… › Õ «·„·› Ê„ﬂ«‰  Œ“Ì‰Â
+    // run code > view > solution Explorer > Right Click on name > open folder in file location
+
+
+    return 0;
+}

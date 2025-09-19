@@ -1,0 +1,19 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+    fstream MyFile;
+
+    // › Õ «·„·› „‰ œÊ‰ Õ–› „« ”»ﬁ „⁄ ·«÷«›… «Œ— «·„·› (Append Mode)
+    MyFile.open("MyFile.txt", ios::out | ios::app); //append Mode Ì« » Œ·ÌÂ ÂÌﬂ
+                                                                 // ios::app Ì« » ”«ÊÌÂ« ÂÌﬂ ›ﬁÿ
+
+    if (MyFile.is_open()) {
+        MyFile << "Hi, this is a new line\n";
+        MyFile << "Hi, this is another new line\n";
+        MyFile.close();
+    }
+
+    return 0;
+}

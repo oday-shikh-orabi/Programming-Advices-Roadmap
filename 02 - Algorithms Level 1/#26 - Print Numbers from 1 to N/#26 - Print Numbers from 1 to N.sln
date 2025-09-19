@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "#26 - Print Numbers from 1 to N", "#26 - Print Numbers from 1 to N\#26 - Print Numbers from 1 to N.csproj", "{28813A80-F180-4EA7-A43C-4ADFAD63FA22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28813A80-F180-4EA7-A43C-4ADFAD63FA22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28813A80-F180-4EA7-A43C-4ADFAD63FA22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28813A80-F180-4EA7-A43C-4ADFAD63FA22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28813A80-F180-4EA7-A43C-4ADFAD63FA22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E59791B-1A64-48E9-A3E7-C3FCD01C32F6}
+	EndGlobalSection
+EndGlobal
