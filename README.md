@@ -1,7 +1,6 @@
 # 🧑‍💻 Programming Advices Roadmap
 
-مرحبًا بك في مستودعي الشخصي! هذا المستودع هو أرشيف للكود الذي كتبته بنفسي خلال رحلتي في تعلم البرمجة مع كورسات الدكتور **محمد أبو هدهود** على منصة  
-[Programming Advices](https://www.bing.com/ck/a?!&&p=66d7c4404eb06449f127539d74fa3f40776106035ecde6fc5a0edc2523562e4dJmltdHM9MTc1ODI0MDAwMA&ptn=3&ver=2&hsh=4&fclid=376a36e8-cbe8-61e1-31d0-2531ca5260fd&psq=programinadvices&u=a1aHR0cHM6Ly9wcm9ncmFtbWluZ2FkdmljZXMuY29tLw)
+مرحبًا بك في مستودعي الشخصي! هذا المستودع هو أرشيف للكود الذي كتبته بنفسي خلال رحلتي في تعلم البرمجة مع كورسات الدكتور **محمد أبو هدهود** على منصة  [Programming Advices](https://www.bing.com/ck/a?!&&p=66d7c4404eb06449f127539d74fa3f40776106035ecde6fc5a0edc2523562e4dJmltdHM9MTc1ODI0MDAwMA&ptn=3&ver=2&hsh=4&fclid=376a36e8-cbe8-61e1-31d0-2531ca5260fd&psq=programinadvices&u=a1aHR0cHM6Ly9wcm9ncmFtbWluZ2FkdmljZXMuY29tLw) .
   
 أشارك هذا الكود مع الآخرين لأغراض تعليمية أو شخصية فقط، ويمكنك استخدامه أو تعديله ضمن هذا النطاق.
 
@@ -38,8 +37,10 @@
 
 ## English Version
 
-Welcome to my personal repository! This is an archive of code I wrote during my programming journey.  
-I share this code for educational and personal use only. You are welcome to use or modify it within that scope.
+Welcome to my personal repository! This repository is an archive of the code I personally wrote during my programming journey through the courses of Dr. **Mohammed Abu Hadhoud** on the [Programming Advices](https://www.bing.com/ck/a?!&&p=66d7c4404eb06449f127539d74fa3f40776106035ecde6fc5a0edc2523562e4dJmltdHM9MTc1ODI0MDAwMA&ptn=3&ver=2&hsh=4&fclid=376a36e8-cbe8-61e1-31d0-2531ca5260fd&psq=programinadvices&u=a1aHR0cHM6Ly9wcm9ncmFtbWluZ2FkdmljZXMuY29tLw) platform.
+
+I share this code with others for educational and personal use only. You are welcome to use or modify it within that scope.
+
 
 ### 🎯 Purpose
 To document and organize the code I write while learning, making it easier to revisit and reflect on later.  
