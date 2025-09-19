@@ -1,6 +1,3 @@
-<p align="center">
-  <img src="images/cover.jpg" alt="Programming Cover" width="100%" />
-</p>
 # 🧑‍💻 Programming Advices Roadmap
 
 مرحبًا بك في مستودعي الشخصي! هذا المستودع هو أرشيف للكود الذي كتبته بنفسي خلال رحلتي في تعلم البرمجة.  
@@ -8,7 +5,7 @@
 
 ---
 
-## 🇸🇦 النسخة العربية
+## النسخة العربية
 
 ### 🎯 الهدف
 توثيق الأكواد التي أكتبها أثناء التعلم، وتنظيمها بطريقة تسهّل الرجوع إليها لاحقًا.  
@@ -37,7 +34,7 @@
 
 ---
 
-## 🇬🇧 English Version
+## English Version
 
 Welcome to my personal repository! This is an archive of code I wrote during my programming journey.  
 I share this code for educational and personal use only. You are welcome to use or modify it within that scope.
