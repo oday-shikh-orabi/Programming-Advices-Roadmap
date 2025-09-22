@@ -7,11 +7,10 @@ using namespace std;
 int RandomNumber(int From, int To)
 {
     // Function to generate a random number
-<<<<<<< HEAD
+
     int randNum = rand() % (To - From + 1) + From; //hellooooo new edit
-=======
+
     int randNum = rand() % (To - From + 1) + From; //hello
->>>>>>> 04d622150ffebe07fd3b8c2c4a386cda671f051a
     return randNum;
 }
 
