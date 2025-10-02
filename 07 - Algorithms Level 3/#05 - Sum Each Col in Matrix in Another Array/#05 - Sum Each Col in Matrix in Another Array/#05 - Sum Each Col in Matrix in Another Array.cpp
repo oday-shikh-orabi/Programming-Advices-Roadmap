@@ -26,7 +26,7 @@ string Tap(int Number)
 
 void FillMatrixWithRandomNumbers(int arr[3][3], short Rows, short Cols)
 {
-    for (short i = 0; i < Rows; i++) // ÇäÊ ÈÊÚÈí ÇáÓØÑ Çæá 
+    for (short i = 0; i < Rows; i++) 
     {
         for (short j = 0; j < Cols; j++)
         {
