@@ -3,11 +3,7 @@
 #include <vector>
 using namespace std;
 
-string ReplaceWordInStringUsingBuiltInFunction(
-    string S1,
-    string StringToReplace,
-    string sRepalceTo
-)
+string ReplaceWordInStringUsingBuiltInFunction(string S1,string StringToReplace,string sRepalceTo)
 {
     short pos = S1.find(StringToReplace);
 

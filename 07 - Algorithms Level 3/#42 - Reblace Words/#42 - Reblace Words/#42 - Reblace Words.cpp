@@ -70,7 +70,7 @@ string ReblaceWords(string S1)
 
 int main()
 {
-    string S1 = ReadString();
+    string S1 = "Welcome to Jordan , Jordan is a nice country";
 
     cout << "\n\nString after Reblace words:";
     cout << "\n" << ReblaceWords(S1);
