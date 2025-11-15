@@ -46,14 +46,6 @@ string MonthShortName(short MonthOfYearOrder)
     return arrMonthNames[MonthOfYearOrder];
 }
 
-short ReadDay()
-{
-    short Day;
-    cout << "\nPlease enter a Day? ";
-    cin >> Day;
-    return Day;
-}
-
 short ReadMonth()
 {
     short Month;
