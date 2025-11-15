@@ -26,12 +26,6 @@ short DayOfWeekOrder(short Day, short Month, short Year)
     return (Day + y + (y / 4) - (y / 100) + (y / 400) + ((31 * m) / 12)) % 7;
 }
 
-string DayShortName(short DayOfWeekOrder)
-{
-    string arrDayNames[] = { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
-    return arrDayNames[DayOfWeekOrder];
-}
-
 short NumberOfDaysInAMonth(short Month, short Year)
 {
     if (Month < 1 || Month > 12)
@@ -42,22 +36,12 @@ short NumberOfDaysInAMonth(short Month, short Year)
     return (Month == 2) ? (isLeapYear(Year) ? 29 : 28) : days[Month - 1];
 }
 
-string MonthShortName(short MonthNumber)
-{
-    string Months[12] = {
-        "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
-
-    return Months[MonthNumber - 1];
-}
-
 bool IsThisTheDate(short DayInLoop, short MonthInLoop)
 {
     return (DayInLoop == Day && MonthInLoop == Month);
 }
 
-
-bool PrintMonthCalendar(short Month, short Year)
+bool DaysCounterInMonth(short Month, short Year)
 {
     int NumberOfDays;
     int current = DayOfWeekOrder(1, Month, Year);
@@ -82,20 +66,19 @@ bool PrintMonthCalendar(short Month, short Year)
     }
 }
 
-void PrintYearCalendar(short Year)
+void DaysFromTheBeginningOfYear(short Year)
 {
-   
 
+    // Month Counter
     DayCounter = 1;
     for (short i = 1; i <= 12; i++)
     {
-        if (!PrintMonthCalendar(i, Year))
+        if (!DaysCounterInMonth(i, Year))
         {
             break;
         }
     }
 }
-
 
 short ReadDay()
 {
@@ -127,9 +110,7 @@ int main()
     Month = ReadMonth();
     Day   = ReadDay();
 
-
-
-    PrintYearCalendar(Year);
+    DaysFromTheBeginningOfYear(Year);
 
     cout << DayCounter;
 
