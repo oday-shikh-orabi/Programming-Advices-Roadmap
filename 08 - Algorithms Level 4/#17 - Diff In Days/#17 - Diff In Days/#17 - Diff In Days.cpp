@@ -94,22 +94,6 @@ short NumberOfDaysFromTheBeginingOfTheYear(short Day, short Month, short Year)
 
 bool IsDate1BeforeDate2(sDate1 Date1, sDate2 Date2)
 {
-
-    /*if (Date1.Year < Date2.Year)
-    {
-        return true;
-    }
-    // ãÇ ÇÎÏÊ ßá ÇáÍÇáÇÊ åæä ãä ÇáÈÏÇíÉ Ýí ÍÇáÊíä åæä
-    else if(Date1.Month< Date2.Month)
-    {
-        return true;
-    }
-    else if(Date1.Day< Date2.Day)
-    {
-        return true;
-    }
-    */
-
     return ((Date1.Year < Date2.Year) ? true : (Date1.Year == Date2.Year) ? (Date1.Month < Date2.Month) ? true : (Date1.Month == Date2.Month) ? (Date1.Day < Date2.Day) : true : false);
 }
 
@@ -140,6 +124,7 @@ bool DaysCounterInMonth(short Day,short Month, short Year, sDate2 Date2)
         Day++;
 
     }
+    return true;   
 }
 
 void DaysFromDate1ToDate2(sDate1 Date1, sDate2 Date2)
@@ -150,7 +135,7 @@ void DaysFromDate1ToDate2(sDate1 Date1, sDate2 Date2)
     // Month Counter
     DayCounter = 0;
     short dif = Date2.Year - Date1.Year;
-    for (int i = 1; i <= dif ; i++)
+    for (int i = 0; i <= dif ; i++)
     {
         while (Month <= 12)
         {
@@ -164,15 +149,7 @@ void DaysFromDate1ToDate2(sDate1 Date1, sDate2 Date2)
         Month = 1;
         Year++;
     }
-    while (Month <= 12)
-    {
-        if (!DaysCounterInMonth(Day, Month, Year, Date2))
-        {
-            break;
-        }
-        Month++;
-
-    }
+   
 }
 
 int main()
