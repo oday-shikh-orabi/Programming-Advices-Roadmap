@@ -66,7 +66,7 @@ int GetDifferenceInDays(stDate Date1, stDate Date2, bool IncludeEndDay = false)
 {
     int Days = 0;
 
-    while (IsDate1BeforeDate2(Date2,Date1))
+    while (IsDate1BeforeDate2(Date1, Date2))
     {
         Days++;
         Date1 = IncreaseDateByOneDay(Date1);
