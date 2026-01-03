@@ -115,6 +115,13 @@ void IncreaseDateByOneMonth(stDate& Date)
         Date.Month++;
     }
 
+
+    int NumberOfDaysInAM = NumberOfDaysInAMonth(Date.Month, Date.Year);
+    if (Date.Day > NumberOfDaysInAM)
+    {
+        Date.Day = NumberOfDaysInAM;
+    }
+
 }
 
 void IncreaseDateByXMonths(stDate& Date)
