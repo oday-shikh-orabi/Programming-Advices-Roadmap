@@ -135,48 +135,53 @@ stDate ReadFullDate()
     return Date;
 }
 
-int CalculateVacationDays(stDate DateFrom, stDate DateTo)
+stDate CalculateVacationReturnDate(stDate Date,int VacationDays)
 {
-    int DaysCount = 0;
+    int BusnissDaysCount = 0;
 
-    while (IsDate1BeforeDate2(DateFrom, DateTo))
+    while (VacationDays != BusnissDaysCount)
     {
-        
-        if (IsBusinessDay(DateFrom))
-        {
-            DaysCount++;
-        }
-        DateFrom = IncreaseDateByOneDay(DateFrom);
 
+        if (IsBusinessDay(Date))
+        {
+            BusnissDaysCount++;
+        }
+        Date = IncreaseDateByOneDay(Date);
+
+        //AllDaysCount;
+        //WeekendsCount = All - Busniss; „Ê ﬂ«„· »œﬂ  Õ”» «–« ›Ì ÊÌﬂ «‰œ  Õ 
     }
 
-    return DaysCount;
+    while (IsWeekEnd(Date))
+    {
+        Date = IncreaseDateByOneDay(Date);
+    }
+
+    return Date;
 
 
 }
 
 int main()
 {
+    int vacationDays;
     cout << "Vacation Starts : \n";
-    stDate DateFrom = ReadFullDate();
-    cout << "\nVacation Ends : \n";
-    stDate DateTo = ReadFullDate();
+    stDate Date = ReadFullDate();
 
-    cout << "\nVacation From :"
-        << DayShortName(DayOfWeekOrder(DateFrom))
+    cout << "\nPlease Enter Vacation Days ?\n";
+    cin >> vacationDays;
+
+    Date = CalculateVacationReturnDate(Date, vacationDays);
+
+
+    //«Ì„  «·ÌÊ„ Ì·Ì »œﬂ  œ«Ê„ ›ÌÂ »⁄œ «·«Ã«“…
+    cout << "\nReturn Date :"
+        << DayShortName(DayOfWeekOrder(Date))
         << " , "
-        << DateFrom.Day << "/"
-        << DateFrom.Month << "/"
-        << DateFrom.Year << endl;
+        << Date.Day << "/"
+        << Date.Month << "/"
+        << Date.Year << endl;
 
-    cout << "Vacation To :"
-        << DayShortName(DayOfWeekOrder(DateTo))
-        << " , "
-        << DateTo.Day << "/"
-        << DateTo.Month << "/"
-        << DateTo.Year << endl;
-
-    cout << "\nActucal Vacation Days Is :" << CalculateVacationDays(DateFrom, DateTo);
 
     system("pause>0");
     return 0;
