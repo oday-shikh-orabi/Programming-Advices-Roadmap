@@ -96,12 +96,13 @@ bool IsOvelapPeriods(stPeriods Period1, stPeriods Period2)
     //befor  íÚäí ãÇİí Ôí ãÔÊÑß Èíä ÇáÊÇÑíÎíä 
     // ÇäÊ Úã ÊŞÇÑä end ÊÈÚ ÇáÇæá ãÚ Çá start ÊÈÚ ÇáËÇäí Çæ ÈÇáÚßÓ ÇäÊ ãÇ Úã ÊŞÇÑä ãä ÈÏÇíÉ ÇáÇæá áäåÇíÉ ÇáÇæá ãÚ ÈÏÇíÉ ÇáËÇäí áäåÇíÉ ÇáËÇäí 
     //  áåíß ãÇ ÑÍ íßæä İí ãÓÇæÇÉ Èíä ÇáÊÇÑíÎíä ÈÓ ÊÓÊÎÏã ÈíİæÑ
+    //                               10/1/2022 , 10/1/20222 not befor or after this is equal
     if (IsDate1BeforeDate2(Period1.EndDate, Period2.StartDate) /* && !IsDate1EqualDate2(Period1.EndDate, Period2.StartDate)*/)
     {
         return false;
     }
     //this is faster than After
-    if (IsDate1BeforeDate2(Period2.EndDate, Period1.StartDate) && !IsDate1EqualDate2(Period2.EndDate, Period1.StartDate))
+    if (IsDate1BeforeDate2(Period2.EndDate, Period1.StartDate) /* && !IsDate1EqualDate2(Period2.EndDate, Period1.StartDate)*/)
     {
         return false;
     }
