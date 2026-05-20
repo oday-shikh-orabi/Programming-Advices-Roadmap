@@ -200,62 +200,21 @@ public:
 class clsDeveloper : clsEmployee
 {
 private:
-    string _Title;
-    string _Department;
+    
     string _MainProgrammingLanguage;
-    float _Salary;
 
 
     public:
-    clsDeveloper(int ID, string FirstName, string LastName, string Email, string Phone, string Title, string Department, float Salary, string MainProgrammingLanguage)
+    clsDeveloper(int ID, string FirstName, string LastName, string Email, string Phone, string Title
+        , string Department, float Salary, string MainProgrammingLanguage)
         : clsEmployee(ID,FirstName,LastName,Email,Phone,Title,Department,Salary)
     {
 
-        _Title = Title;
-        _Department = Department;
-        _Salary = Salary;
         _MainProgrammingLanguage = MainProgrammingLanguage;
 
     }
 
 
-    //Property Set
-    void setTitle(string Title)
-    {
-        _Title = Title;
-    }
-
-    //Property Get
-    string Title()
-    {
-        return _Title;
-    }
-
-    //Property Set
-    void setDepartment(string Department)
-    {
-        _Department = Department;
-
-    }
-
-
-    //Property Get
-    string Department()
-    {
-        return _Department;
-    }
-
-    //Property Set
-    void setSalary(float Salary)
-    {
-        _Salary = Salary;
-    }
-
-    //Property Get
-    float Salary()
-    {
-        return _Salary;
-    }
     
     //Property Set
     void setMainProgrammingLanguage(string MainProgrammingLanguage)
@@ -282,9 +241,10 @@ private:
         cout << "\nEmail                  : " << Email();
         cout << "\nPhone                  : " << Phone();
 
-        cout << "\nTitle                  : " << _Title;
-        cout << "\nDepartment             : " << _Department;
-        cout << "\nSalary                 : " << _Salary;
+        cout << "\nTitle                  : " << Title();
+        cout << "\nDepartment             : " << Department();
+        cout << "\nSalary                 : " << Salary();
+
         cout << "\nMainProgrammingLanguage: " << _MainProgrammingLanguage;
 
 
@@ -298,7 +258,7 @@ private:
 int main()
 
 {
-    clsDeveloper Developer1(10, "Mohammed", "Abu-Hadhoud", "A@a.com", "8298982", "CEO", "ProgrammingAdvices", 5000, "C++");
+    clsDeveloper Developer1(10, "Mohammed", "Abu-Hadhoud", "A@a.com", "8298982", "Web Developer", "ProgrammingAdvices", 5000, "C++");
    
     Developer1.Print();
 
