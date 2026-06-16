@@ -102,6 +102,9 @@ int main()
     cout << "Text After Decryption  : ";
     cout << TextAfterDecryption << endl;
 
+
+    clsUtil::GenerateKeys(2,clsUtil::enCharType::SamallLetter);
+
     system("pause>0");
 
     return 0;
