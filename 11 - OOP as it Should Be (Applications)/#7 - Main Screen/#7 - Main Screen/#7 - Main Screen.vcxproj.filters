@@ -56,12 +56,15 @@
     <ClInclude Include="clsUpdateClientScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="clsFindClientScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="clsTransactionsScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+=======
+>>>>>>> a3308c7de7403fe0d091a16a56e832ef043034c6
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="#7 - Main Screen.rc">

@@ -141,7 +141,10 @@
     <ClInclude Include="clsPerson.h" />
     <ClInclude Include="clsScreen.h" />
     <ClInclude Include="clsString.h" />
+<<<<<<< HEAD
     <ClInclude Include="clsTransactionsScreen.h" />
+=======
+>>>>>>> a3308c7de7403fe0d091a16a56e832ef043034c6
     <ClInclude Include="clsUpdateClientScreen.h" />
     <ClInclude Include="clsUtil.h" />
   </ItemGroup>

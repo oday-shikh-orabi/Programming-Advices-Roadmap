@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+<<<<<<< HEAD
 #include "clsScreen.h"
 #include "clsPerson.h"
 #include "clsBankClient.h"
@@ -26,6 +27,16 @@ private:
 
     }
 
+=======
+#include "clsBankClient.h"
+#include "clsInputValidate.h"
+
+
+class clsUpdateClientScreen : clsScreen
+{
+private:
+
+>>>>>>> a3308c7de7403fe0d091a16a56e832ef043034c6
     static void ReadClientInfo(clsBankClient& Client)
     {
         cout << "\nEnter FirstName: ";
@@ -47,12 +58,36 @@ private:
         Client.AccountBalance = clsInputValidate::ReadFloatNumber();
     }
 
+<<<<<<< HEAD
 public:
 
     static void ShowUpdateClientScreen()
     {
 
         _DrawScreenHeader("\tUpdate Client Screen");
+=======
+    static void _PrintClient(clsBankClient Client)
+    {
+        cout << "\nClient Card:";
+        cout << "\n___________________";
+        cout << "\nFirstName   : " << Client.FirstName;
+        cout << "\nLastName    : " << Client.LastName;
+        cout << "\nFull Name   : " << Client.FullName();
+        cout << "\nEmail       : " << Client.Email;
+        cout << "\nPhone       : " << Client.Phone;
+        cout << "\nAcc. Number : " << Client.AccountNumber();
+        cout << "\nPassword    : " << Client.PinCode;
+        cout << "\nBalance     : " << Client.AccountBalance;
+        cout << "\n___________________\n";
+
+    }
+
+
+public:
+    static void UpdateClient()
+    {
+        clsScreen::_DrawScreenHeader("Update Client Screen");
+>>>>>>> a3308c7de7403fe0d091a16a56e832ef043034c6
 
         string AccountNumber = "";
 
@@ -66,6 +101,7 @@ public:
         }
 
         clsBankClient Client1 = clsBankClient::Find(AccountNumber);
+<<<<<<< HEAD
 
         _PrintClient(Client1);
 
@@ -108,5 +144,37 @@ public:
         }
 
     }
+=======
+        _PrintClient(Client1);
+
+        cout << "\n\nUpdate Client Info:";
+        cout << "\n____________________\n";
+
+
+        ReadClientInfo(Client1);
+
+        clsBankClient::enSaveResults SaveResult;
+
+        SaveResult = Client1.Save();
+
+        switch (SaveResult)
+        {
+        case  clsBankClient::enSaveResults::svSucceeded:
+        {
+            cout << "\nAccount Updated Successfully :-)\n";
+            _PrintClient(Client1);
+            break;
+        }
+        case clsBankClient::enSaveResults::svFaildEmptyObject:
+        {
+            cout << "\nError account was not saved because it's Empty";
+            break;
+
+        }
+
+        }
+    }
+
+>>>>>>> a3308c7de7403fe0d091a16a56e832ef043034c6
 };
 
