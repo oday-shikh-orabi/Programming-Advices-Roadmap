@@ -130,11 +130,12 @@
     <ClCompile Include="#7 - Main Screen.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\#6 - Total Balances\#6 - Total Balances\clsPerson.h" />
     <ClInclude Include="clsBankClient.h" />
+    <ClInclude Include="clsClientListScreen.h" />
     <ClInclude Include="clsDate.h" />
     <ClInclude Include="clsInputValidate.h" />
     <ClInclude Include="clsMainScreen.h" />
+    <ClInclude Include="clsPerson.h" />
     <ClInclude Include="clsScreen.h" />
     <ClInclude Include="clsString.h" />
     <ClInclude Include="clsUtil.h" />

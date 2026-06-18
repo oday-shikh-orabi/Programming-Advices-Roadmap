@@ -41,7 +41,10 @@
     <ClInclude Include="clsUtil.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\#6 - Total Balances\#6 - Total Balances\clsPerson.h">
+    <ClInclude Include="clsClientListScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clsPerson.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
