@@ -358,12 +358,36 @@ public:
         Save();
     }
 
-    void Withdraw(double Amount)
+
+    bool Withdraw(double Amount)
     {
-        _AccountBalance -= Amount;
-        Save();
+        if (Amount > _AccountBalance)
+        {
+            return false;
+        }
+        else
+        {
+            _AccountBalance -= Amount;
+            Save();
+            return true;
+        }
+
     }
 
+    static double GetTotalBalances()
+    {
+        vector <clsBankClient> vClients = clsBankClient::GetClientsList();
+
+        double TotalBalances = 0;
+
+        for (clsBankClient Client : vClients)
+        {
+
+            TotalBalances += Client.AccountBalance;
+        }
+
+        return TotalBalances;
+    }
 
 };
 
