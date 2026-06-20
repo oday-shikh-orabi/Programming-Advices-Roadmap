@@ -151,6 +151,11 @@ private:
 
 public:
 
+    enum enPermissions {
+        eAll = -1, pListClients = 1, pAddNewClient = 2, pDeleteClient = 4,
+        pUpdateClients = 8, pFindClient = 16, pTranactions = 32, pManageUsers = 64
+    };
+
     clsUser(enMode Mode, string FirstName, string LastName,
         string Email, string Phone, string UserName, string Password,
         int Permissions) :
@@ -173,15 +178,16 @@ public:
         return _MarkedForDelete;
     }
 
+    string GetUserName()
+    {
+        return _UserName;
+    }
+
     void SetUserName(string UserName)
     {
         _UserName = UserName;
     }
 
-    string GetUserName()
-    {
-        return _UserName;
-    }
     __declspec(property(get = GetUserName, put = SetUserName)) string UserName;
 
     void SetPassword(string Password)
@@ -340,6 +346,7 @@ public:
     {
         return _LoadUsersDataFromFile();
     }
+
 
 
 };
