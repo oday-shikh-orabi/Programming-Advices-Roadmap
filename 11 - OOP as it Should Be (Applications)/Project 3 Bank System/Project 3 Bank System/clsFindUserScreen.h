@@ -2,57 +2,61 @@
 #include <iostream>
 #include "clsScreen.h"
 #include "clsPerson.h"
-#include "clsUser.h"
+#include "clsBankClient.h"
 #include "clsInputValidate.h"
 
-class clsFindUserScreen :protected clsScreen
+class clsFindClientScreen :protected clsScreen
 {
 
 private:
-    static void _PrintUser(clsUser User)
+    static void _PrintClient(clsBankClient Client)
     {
-        cout << "\nUser Card:";
+        cout << "\nClient Card:";
         cout << "\n___________________";
-        cout << "\nFirstName   : " << User.FirstName;
-        cout << "\nLastName    : " << User.LastName;
-        cout << "\nFull Name   : " << User.FullName();
-        cout << "\nEmail       : " << User.Email;
-        cout << "\nPhone       : " << User.Phone;
-        cout << "\nUserName    : " << User.UserName;
-        cout << "\nPassword    : " << User.Password;
-        cout << "\nPermissions : " << User.Permissions;
+        cout << "\nFirstName   : " << Client.FirstName;
+        cout << "\nLastName    : " << Client.LastName;
+        cout << "\nFull Name   : " << Client.FullName();
+        cout << "\nEmail       : " << Client.Email;
+        cout << "\nPhone       : " << Client.Phone;
+        cout << "\nAcc. Number : " << Client.AccountNumber();
+        cout << "\nPassword    : " << Client.PinCode;
+        cout << "\nBalance     : " << Client.AccountBalance;
         cout << "\n___________________\n";
 
     }
 
 public:
 
-    static void ShowFindUserScreen()
+    static void ShowFindClientScreen()
     {
-
-        _DrawScreenHeader("\t  Find User Screen");
-
-        string UserName;
-        cout << "\nPlease Enter UserName: ";
-        UserName = clsInputValidate::ReadString();
-        while (!clsUser::IsUserExist(UserName))
+        if (!CheckAccessRights(clsUser::enPermissions::pFindClient))
         {
-            cout << "\nUser is not found, choose another one: ";
-            UserName = clsInputValidate::ReadString();
+            return;// this will exit the function and it will not continue
         }
 
-        clsUser User1 = clsUser::Find(UserName);
+        _DrawScreenHeader("\tFind Client Screen");
 
-        if (!User1.IsEmpty())
+        string AccountNumber;
+        cout << "\nPlease Enter Account Number: ";
+        AccountNumber = clsInputValidate::ReadString();
+        while (!clsBankClient::IsClientExist(AccountNumber))
         {
-            cout << "\nUser Found :-)\n";
+            cout << "\nAccount number is not found, choose another one: ";
+            AccountNumber = clsInputValidate::ReadString();
+        }
+
+        clsBankClient Client1 = clsBankClient::Find(AccountNumber);
+
+        if (!Client1.IsEmpty())
+        {
+            cout << "\nClient Found :-)\n";
         }
         else
         {
-            cout << "\nUser Was not Found :-(\n";
+            cout << "\nClient Was not Found :-(\n";
         }
 
-        _PrintUser(User1);
+        _PrintClient(Client1);
 
     }
 
