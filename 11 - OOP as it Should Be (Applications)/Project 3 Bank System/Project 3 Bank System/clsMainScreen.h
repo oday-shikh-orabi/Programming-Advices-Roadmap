@@ -101,8 +101,6 @@ private:
     {
 
         CurrentUser = clsUser::Find("", "");
-
-
         //then it will go back to main function.
     }
 
