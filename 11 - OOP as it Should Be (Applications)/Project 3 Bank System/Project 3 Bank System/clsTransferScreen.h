@@ -20,23 +20,10 @@ private:
 
     }
 
-    static string _ReadAccountNumberF()
+    static string _ReadAccountNumber()
     {
         string AccountNumber;
         cout << "\nPlease Enter Account Number to Transfer From: ";
-        AccountNumber = clsInputValidate::ReadString();
-        while (!clsBankClient::IsClientExist(AccountNumber))
-        {
-            cout << "\nAccount number is not found, choose another one: ";
-            AccountNumber = clsInputValidate::ReadString();
-        }
-        return AccountNumber;
-    }
-
-    static string _ReadAccountNumberT()
-    {
-        string AccountNumber;
-        cout << "\nPlease Enter Account Number to Transfer To: ";
         AccountNumber = clsInputValidate::ReadString();
         while (!clsBankClient::IsClientExist(AccountNumber))
         {
@@ -69,11 +56,11 @@ public:
 
         _DrawScreenHeader("\tTransfer Screen");
 
-        clsBankClient SourceClient = clsBankClient::Find(_ReadAccountNumberF());
+        clsBankClient SourceClient = clsBankClient::Find(_ReadAccountNumber());
 
         _PrintClient(SourceClient);
 
-        clsBankClient DestinationClient = clsBankClient::Find(_ReadAccountNumberT());
+        clsBankClient DestinationClient = clsBankClient::Find(_ReadAccountNumber());
 
         _PrintClient(DestinationClient);
 
@@ -85,10 +72,9 @@ public:
         cin >> Answer;
         if (Answer == 'Y' || Answer == 'y')
         {
-            if (SourceClient.Transfer(Amount, DestinationClient))
+            if (SourceClient.Transfer(Amount, DestinationClient, CurrentUser.UserName))
             {
                 cout << "\nTransfer done successfully\n";
-
             }
             else
             {
