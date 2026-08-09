@@ -276,7 +276,19 @@ public:
 
     }
 
+    bool UpdateItem(int Index, T NewValue)
+    {
+        Node* ItemNode = GetNode(Index);
 
+        if (ItemNode != NULL)
+        {
+            ItemNode->value = NewValue;
+            return true;
+        }
+        else
+            return false;
+
+    }
 
 };
 
