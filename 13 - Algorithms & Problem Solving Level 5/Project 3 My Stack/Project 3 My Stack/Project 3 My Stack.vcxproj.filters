@@ -14,19 +14,25 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="Header Files\DS">
-      <UniqueIdentifier>{60cf4523-9e5b-4ba5-b3a6-f3e64651577f}</UniqueIdentifier>
+      <UniqueIdentifier>{ae93a1e1-e4bf-4eca-8f75-c23b428b5900}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Project 2 My Queue.cpp">
+    <ClCompile Include="Project 3 My Stack.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="clsMyStack.h">
+      <Filter>Header Files\DS</Filter>
+    </ClInclude>
     <ClInclude Include="clsDblLinkedList.h">
       <Filter>Header Files\DS</Filter>
     </ClInclude>
     <ClInclude Include="clsMyQueue.h">
+      <Filter>Header Files\DS</Filter>
+    </ClInclude>
+    <ClInclude Include="clsDynamicArray.h">
       <Filter>Header Files\DS</Filter>
     </ClInclude>
   </ItemGroup>
