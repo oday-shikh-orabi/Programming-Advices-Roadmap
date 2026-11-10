@@ -361,3 +361,55 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+
+///////////////
+# Build results
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa]rm/
+[Aa]rm64/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build logs
+*.log
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+
+# Visual Studio cache
+*.cache
+*.pdb
+*.ilk
+*.obj
+*.pch
+*.idb
+*.tlog/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.old
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
