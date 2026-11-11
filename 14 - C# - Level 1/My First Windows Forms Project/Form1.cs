@@ -82,5 +82,10 @@ namespace My_First_Windows_Forms_Project
         {
             label2.Text = "Oday Shikh Orabi";
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
