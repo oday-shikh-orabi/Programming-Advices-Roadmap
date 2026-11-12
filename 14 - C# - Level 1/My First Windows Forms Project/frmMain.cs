@@ -31,5 +31,11 @@ namespace My_First_Windows_Forms_Project
             Form1 frm1 = new Form1();
             frm1.ShowDialog();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Form frm1 = new frmMessageBox();
+            frm1.ShowDialog();
+        }
     }
 }
