@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace Pizza_Poject
 {
@@ -17,7 +18,10 @@ namespace Pizza_Poject
         public Form1()
         {
             InitializeComponent();
+
+            btnOrderPizza.Select();
         }
+
 
         int sumPrice = 0;
 
@@ -26,11 +30,14 @@ namespace Pizza_Poject
             if (rdSmall.Checked)
             {
                 lbSizeAnswer.Text = "Small";
+                lbSizeAnswer.ForeColor = Color.LimeGreen;
                 lbPriceAnswer.ForeColor = Color.LimeGreen;
                 SumToPrice(10);
             }
             else
             {
+                lbSizeAnswer.Text = "No choose.";
+                lbSizeAnswer.ForeColor = Color.Red;
                 SubtractedFromPrice(10);
             }
         }
@@ -40,11 +47,14 @@ namespace Pizza_Poject
             if (rdMedium.Checked)
             {
                 lbSizeAnswer.Text = "Medium";
+                lbSizeAnswer.ForeColor = Color.LimeGreen;
                 lbPriceAnswer.ForeColor = Color.LimeGreen;
                 SumToPrice(20);
             }
             else
             {
+                lbSizeAnswer.Text = "No choose.";
+                lbSizeAnswer.ForeColor = Color.Red;
                 SubtractedFromPrice(20);
             }
 
@@ -55,11 +65,14 @@ namespace Pizza_Poject
             if(rdLarge.Checked)
             {
                 lbSizeAnswer.Text = "Large";
+                lbSizeAnswer.ForeColor = Color.LimeGreen;
                 lbPriceAnswer.ForeColor = Color.LimeGreen;
                 SumToPrice(30);
             }
             else
             {
+                lbSizeAnswer.Text = "No choose.";
+                lbSizeAnswer.ForeColor = Color.Red;
                 SubtractedFromPrice(30);
             }
 
@@ -73,13 +86,13 @@ namespace Pizza_Poject
                 {
                     lbToppingsAnswer.Text = "Extra Cheese";
                     lbToppingsAnswer.ForeColor = Color.LimeGreen;
+                    lbPriceAnswer.ForeColor = Color.LimeGreen;
                     SumToPrice(10);
                     UpdateLabelSize();
                 }
                 else
                 {
                     lbToppingsAnswer.Text += ", Extra Cheese";
-                    lbToppingsAnswer.ForeColor = Color.LimeGreen;
                     SumToPrice(10);
                     UpdateLabelSize();
                 }
@@ -114,6 +127,7 @@ namespace Pizza_Poject
                 {
                     lbToppingsAnswer.Text = "Onion";
                     lbToppingsAnswer.ForeColor = Color.LimeGreen;
+                    lbPriceAnswer.ForeColor = Color.LimeGreen;
                     SumToPrice(10);
                     UpdateLabelSize();
                 }
@@ -154,6 +168,7 @@ namespace Pizza_Poject
                 {
                     lbToppingsAnswer.Text = "Mushrooms";
                     lbToppingsAnswer.ForeColor = Color.LimeGreen;
+                    lbPriceAnswer.ForeColor = Color.LimeGreen;
                     SumToPrice(10);
                     UpdateLabelSize();
                 }
@@ -193,6 +208,7 @@ namespace Pizza_Poject
                 {
                     lbToppingsAnswer.Text = "Olives";
                     lbToppingsAnswer.ForeColor = Color.LimeGreen;
+                    lbPriceAnswer.ForeColor = Color.LimeGreen;
                     SumToPrice(10);
                     UpdateLabelSize();
                 }
@@ -232,6 +248,7 @@ namespace Pizza_Poject
                 {
                     lbToppingsAnswer.Text = "Tomatoes";
                     lbToppingsAnswer.ForeColor = Color.LimeGreen;
+                    lbPriceAnswer.ForeColor = Color.LimeGreen;
                     SumToPrice(10);
                     UpdateLabelSize();
                 }
@@ -271,6 +288,7 @@ namespace Pizza_Poject
                 {
                     lbToppingsAnswer.Text = "Green Pepperse";
                     lbToppingsAnswer.ForeColor = Color.LimeGreen;
+                    lbPriceAnswer.ForeColor = Color.LimeGreen;
                     SumToPrice(10);
                     UpdateLabelSize();
                 }
@@ -308,10 +326,13 @@ namespace Pizza_Poject
             {
                 lbCrustTybeAnswer.Text = "Thin Crust";
                 lbCrustTybeAnswer.ForeColor = Color.LimeGreen;
+                lbPriceAnswer.ForeColor = Color.LimeGreen;
                 SumToPrice(10);
             }
             else
             {
+                lbCrustTybeAnswer.Text = "No choose";
+                lbCrustTybeAnswer.ForeColor = Color.Red;
                 SubtractedFromPrice(10);
             }
 
@@ -323,10 +344,13 @@ namespace Pizza_Poject
             {
                 lbCrustTybeAnswer.Text = "Thick Crust";
                 lbCrustTybeAnswer.ForeColor = Color.LimeGreen;
+                lbPriceAnswer.ForeColor = Color.LimeGreen;
                 SumToPrice(10);
             }
             else
             {
+                lbCrustTybeAnswer.Text = "No choose";
+                lbCrustTybeAnswer.ForeColor = Color.Red;
                 SubtractedFromPrice(10);
             }
 
@@ -339,6 +363,11 @@ namespace Pizza_Poject
                 lbWhereToEatAnswer.Text = "Eat In";
                 lbWhereToEatAnswer.ForeColor = Color.LimeGreen;
             }
+            else
+            {
+                lbWhereToEatAnswer.Text = "No choose.";
+                lbWhereToEatAnswer.ForeColor = Color.Red;
+            }
             
         }
 
@@ -349,7 +378,12 @@ namespace Pizza_Poject
                 lbWhereToEatAnswer.Text = "Take Out";
                 lbWhereToEatAnswer.ForeColor = Color.LimeGreen;
             }
-                
+            else
+            {
+                lbWhereToEatAnswer.Text = "No choose.";
+                lbWhereToEatAnswer.ForeColor = Color.Red;
+            }
+
         }
 
         private void UpdateLabelSize()
@@ -371,5 +405,89 @@ namespace Pizza_Poject
             sumPrice -= Price;
             lbPriceAnswer.Text = sumPrice.ToString() + "$";
         }
+
+        private void btnOrderPizza_MouseEnter(object sender, EventArgs e)
+        {
+            btnOrderPizza.BackColor = Color.FromArgb(46, 125, 50);
+        }
+
+        private void btnOrderPizza_MouseLeave(object sender, EventArgs e)
+        {
+            btnOrderPizza.BackColor = Color.FromArgb(56, 142, 60);
+
+        }
+
+        private void btnResetForm_MouseLeave(object sender, EventArgs e)
+        {
+            btnResetForm.BackColor = Color.FromArgb(183, 28, 28);
+        }
+
+        private void btnResetForm_MouseEnter(object sender, EventArgs e)
+        {
+            btnResetForm.BackColor = Color.FromArgb(198, 40, 40);
+        }
+
+        private void btnOrderPizza_Click(object sender, EventArgs e)
+        {
+            if (lbPriceAnswer.Text == "0$")
+            {
+                MessageBox.Show("Please Select Pizza Size", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (MessageBox.Show("Confirm Order", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+            {
+
+                MessageBox.Show("Order Placed Succesfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                gbSize.Enabled = false;
+                gbToppings.Enabled = false;
+                gbCrustTybe.Enabled = false;
+                gbWhereToEat.Enabled = false;
+                btnOrderPizza.Enabled = false;
+                
+            }
+            
+        }
+
+        void ResetForm()
+        {
+            
+            //Reset all checkboxes and ridio button
+            rdSmall.Checked = false;
+            rdMedium.Checked = false;
+            rdLarge.Checked = false;
+
+            rdThinCrust.Checked = false;
+            rdThickCrust.Checked = false;
+
+            rdEatIn.Checked = false;
+            rdTakeOut.Checked = false;
+
+            chkExtraCheese.Checked = false;
+            chkMushrooms.Checked = false;
+            chkOlives.Checked = false;
+            chkOnion.Checked = false;
+            chkTomatoes.Checked = false;
+            chkGreenPeppers.Checked = false;
+
+            //Reset Order Summary Label
+            lbPriceAnswer.ForeColor = Color.Red;
+
+
+            //Enaple all group boxes and buttons
+            gbSize.Enabled = true;
+            gbToppings.Enabled = true;
+            gbCrustTybe.Enabled = true;
+            gbWhereToEat.Enabled = true;
+            btnOrderPizza.Enabled = true;
+        }
+
+        private void btnResetForm_Click(object sender, EventArgs e)
+        {
+            ResetForm();
+        }
+
+        
     }
 }
